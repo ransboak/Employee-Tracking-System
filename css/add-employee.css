@@ -1,0 +1,85 @@
+@import"https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap";
+
+:root{
+    --primary-color: #15074E;
+    --color-primary-variant: #3f376085;
+    --color-primary-variant-2: #564b8428;
+    --secondary-color: #8675EB;
+    --color-light: #eaeaf1c6;
+    --color-red: #da0f3f;
+    --color-red-light: hsl(346, 87%, 46%, 15%);
+    --color-green: #00c476;
+    --color-green-light: hsl(156, 100%, 38%, 15%);
+}
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    box-sizing:border-box;
+    list-style:none;
+    text-decoration:none
+}
+
+html{
+    scroll-behavior:smooth
+}
+
+body{
+    font-family:"Montserrat",sans-serif;
+    background: var(--color-light);
+}
+.container{
+    padding-top: 8rem;
+    width: 40%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+}
+.btn-primary{
+    color: var(--color-light);
+    padding: 1rem 1.5rem;
+    border-radius: 1.4rem;
+    background: var(--primary-color);
+    width: fit-content;
+    transition: all 400ms ease;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 1rem 1.5rem;
+    background: var(--color-light);
+    width: fit-content;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+form input, select{
+    padding: 1rem;
+}
+
+.form__control{
+    display: flex;
+    flex-direction: column;
+}
+.alert__message{
+    padding: 0.8rem  1.4rem;
+    margin-bottom: 1rem;
+    border-radius: 1.2rem;
+}
+
+.alert__message.error{
+    background: var(--color-red-light);
+    color: var(--color-red);
+}
+
+.alert__message.success{
+    background: var(--color-green-light);
+    color: var(--color-green);
+}
+.alert__message.lg{
+    text-align: center;
+}
